@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const deltaTime = (now - lastUpdate) / 1000; // Time in seconds
         lastUpdate = now;
 
-		const acc = 1;
+		const acc = 4;
 
         velocity.x += acc * acceleration.x * deltaTime;
         velocity.y += acc * acceleration.y * deltaTime;
