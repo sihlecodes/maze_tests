@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (currentCell.walls.right && x != now.x) {
 				// newX -= ballRadius;
 				newX = player.x;
-				// velocity.x = 0;
+				velocity.x = 0;
         		// return { newX, newY };
 			}
 		}
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (currentCell.walls.left && x != now.x) {
 				// newX += ballRadius;
 				newX = player.x;
-				// velocity.x = 0;
+				velocity.x = 0;
         		// return { newX, newY };
 			}
 		}
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (currentCell.walls.bottom && y != now.y) {
 				// newY -= ballRadius;
 				newY = player.y;
-				// velocity.y = 0;
+				velocity.y = 0;
         		// return { newX, newY };
 			}
 		}
@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (currentCell.walls.top && y != now.y) {
 				// newY += ballRadius;
 				newY = player.y;
-				// velocity.y = 0;
+				velocity.y = 0;
         		// return { newX, newY };
 			}
 		}
