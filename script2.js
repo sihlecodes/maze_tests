@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('mazeCanvas');
     const ctx = canvas.getContext('2d');
 
+    const stats = document.getElementById("stats");
     const width = canvas.width;
     const height = canvas.height;
     const cellSize = 60;
@@ -32,12 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Device orientation not supported.");
     }
 
+    function r(v) {
+        return Math.round(v * Math.pow(10, 2)) / Math.pow(10, 2);
+    }
     function handleOrientation(event) {
         const now = Date.now();
         if (now - lastUpdate > 16) {
             acceleration.x = event.gamma / 45;
             acceleration.y = event.beta / 90;
             lastUpdate = now;
+
+            stats.innerText = `ax: ${r(acceleration.x)}, ay: ${r(acceleration.y)}, vx: ${r(velocity.x)}, vy: ${r(velocity.y)}, x: ${r(player.x)}, y: ${r(player.y)}`;
         }
     }
 
