@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const deltaTime = (now - lastUpdate) / 1000; // Time in seconds
         lastUpdate = now;
 
-		const acc = 100;
+		const acc = 10;
 
         velocity.x += acc * acceleration.x * deltaTime;
         velocity.y += acc * acceleration.y * deltaTime;
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         velocity.x *= friction;
         velocity.y *= friction;
 
-		const vel = 100;
+		const vel = 10;
 
 		velocity.x = Math.max(Math.min(velocity.x, vel), -vel);
 		velocity.y = Math.max(Math.min(velocity.y, vel), -vel);
