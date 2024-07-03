@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleOrientation(event) {
         const now = Date.now();
         if (now - lastUpdate > 16) {
-            acceleration.x = event.gamma / 90;
-            acceleration.y = event.beta / 180;
+            acceleration.x = event.gamma / 45;
+            acceleration.y = event.beta / 90;
             lastUpdate = now;
         }
     }
