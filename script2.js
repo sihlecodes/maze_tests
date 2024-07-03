@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let velocity = { x: 0, y: 0 };
     let acceleration = { x: 0, y: 0 };
-    const friction = 0.9;
+    const friction = 1;
     let lastUpdate = Date.now();
 
     document.querySelector('.startbtn').addEventListener('click', function () {
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         velocity.x *= friction;
         velocity.y *= friction;
 
-		const vel = 5;
+		const vel = 9;
 
 		velocity.x = Math.max(Math.min(velocity.x, vel), -vel);
 		velocity.y = Math.max(Math.min(velocity.y, vel), -vel);
